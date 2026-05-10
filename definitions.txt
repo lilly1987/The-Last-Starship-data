@@ -1,0 +1,630 @@
+BEGIN Definition
+    Type Equipment
+    BEGIN Equipment Width 0 Height 1 Resizable True  NonBlocking True END
+END
+
+BEGIN Definition
+    Type Battery
+    BEGIN Equipment Width 2 Height 3 Rotatable True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 2 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 2 Height 3 END
+END
+
+BEGIN Definition
+    Type Tank
+    BEGIN Equipment Width 3 Height 5 Rotatable True  NonBlocking True END
+    BEGIN Port Type Pipes X 1 Y 4 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 3 Height 5 END
+END
+
+BEGIN Definition
+    Type SmallTank
+    BEGIN Equipment Width 2 Height 3 Rotatable True  NonBlocking True END
+    BEGIN Port Type Pipes X 1 Y 2 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 2 Height 3 END
+END
+
+BEGIN Definition
+    Type TinyTank
+    BEGIN Equipment Width 2 Height 2 Rotatable True  NonBlocking True END
+    BEGIN Port Type Pipes X 1 Y 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 2 Height 2 END
+END
+
+BEGIN Definition
+    Type BrokenHopDrive
+    BEGIN Equipment Width 3 Height 3 Resizable True  NonBlocking True END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 3 Height 3 END
+END
+
+BEGIN Definition
+    Type StorageCrate
+    BEGIN Equipment Width 4 Height 3 Rotatable True  NonBlocking True END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN Slot X 0 Y 2 END 
+    BEGIN Slot X 1 Y 0 END 
+    BEGIN Slot X 1 Y 2 END 
+    BEGIN Slot X 2 Y 0 END 
+    BEGIN Slot X 2 Y 2 END 
+    BEGIN Slot X 3 Y 0 END 
+    BEGIN Slot X 3 Y 1 END 
+    BEGIN Slot X 3 Y 2 END 
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 4 Height 3 END
+END
+
+BEGIN Definition
+    Type SmallStorageCrate
+    BEGIN Equipment Width 3 Height 2 Rotatable True  NonBlocking True END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 1 Y 1 END 
+    BEGIN Slot X 1 Y 0 END 
+    BEGIN Slot X 2 Y 0 END 
+    BEGIN Slot X 2 Y 1 END 
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 3 Height 2 END
+END
+
+BEGIN Definition
+    Type RadiationEmitter
+    BEGIN Equipment Width 3 Height 3 EmitsRadiation True  NonBlocking True END
+    BEGIN PlacementRule Constraint Unobstructed X -1 Y -1 Width 5 Height 5 END
+END
+
+BEGIN Definition
+    Type RadiationBlocker
+    BEGIN Equipment Width 1 Height 1 Impassable True  NonBlocking True END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 1 Height 1 END
+END
+
+BEGIN Definition
+    Type LaserInfuser
+    BEGIN Equipment Width 3 Height 3 Rotatable True Powered True Crewed True Factory True EmitsRadiation True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN Slot X 1 Y 1 END
+    BEGIN Slot X 2 Y 1 END
+    BEGIN Slot X 0 Y 2 END
+    BEGIN Slot X 1 Y 2 END
+    BEGIN Slot X 2 Y 2 END
+    BEGIN Station X 1 Y -1 END
+    BEGIN PlacementRule Constraint Unobstructed X -1 Y -1 Width 5 Height 5 END
+END
+
+BEGIN Definition
+    Type Loader
+    BEGIN Equipment Width 1 Height 2 Rotatable true  NonBlocking True END
+    BEGIN Port Type Pipes X 0 Y 0 Flow Out END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 1 Height 2 END
+END
+
+BEGIN Definition
+    Type FuelLoader
+    BEGIN Equipment Width 2 Height 1 Rotatable true  NonBlocking True END
+    BEGIN Port Type Pipes X 1 Y 0 Flow Out Resource Fuel END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 2 Height 1 END
+END
+
+BEGIN Definition
+    Type OxygenLoader
+    BEGIN Equipment Width 2 Height 1 Rotatable true  NonBlocking True END
+    BEGIN Port Type Pipes X 1 Y 0 Flow Out Resource Oxygen END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 2 Height 1 END
+END
+
+BEGIN Definition
+    Type Airduct
+    BEGIN Equipment Width 2 Height 2 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power      X 0 Y 1 END
+    BEGIN Port Type Pipes      X 1 Y 0 Resource Oxygen Flow In END
+    BEGIN Port Type Atmosphere X 1 Y 1 END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 2 Height 2 END
+END
+
+BEGIN Definition
+    Type Scrubber
+    BEGIN Equipment Width 2 Height 2 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Pipes      X 1 Y 0 Resource CarbonDioxide Flow Out END
+    BEGIN Port Type Power      X 0 Y 1 END
+    BEGIN Port Type Atmosphere X 1 Y 1 END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 2 Height 2 END
+END
+
+BEGIN Definition
+    Type Engine
+    BEGIN Equipment Width 7 Height 4 Powered True  NonBlocking True END
+    BEGIN Port Type Power X 5 Y 1 END
+    BEGIN Port Type Pipes X 5 Y 2 Resource Fuel Flow In END
+    BEGIN PlacementRule Constraint Unobstructed X -6 Y 0 Width 6 Height 4 END
+    BEGIN PlacementRule Constraint Exterior     X -6 Y 0 Width 6 Height 4 END
+    BEGIN PlacementRule Constraint Interior     X 5 Y 0 Width 2 Height 4 END
+END
+
+BEGIN Definition
+    Type Thruster
+    BEGIN Equipment Width 3 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 0 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y 0 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -2 Width 3 Height 2 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -1 Width 3 Height 1 END
+END
+
+BEGIN Definition
+    Type SpaceSuitPod
+    BEGIN Equipment Width 1 Height 1  NonBlocking True END
+    BEGIN Port Type Pipes X 0 Y 0 Resource Oxygen Flow In END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 1 Height 1 END
+END
+
+BEGIN Definition
+    Type FTLDrive
+    BEGIN Equipment Width 3 Height 3 Charge 10 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 0 END
+    BEGIN Slot X 1 Y 2 END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 3 Height 3 END
+END
+
+BEGIN Definition
+    Type GatlingGun
+    BEGIN Equipment Width 3 Height 2 Rotatable True Powered true  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 1 END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN Slot X 2 Y 1 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y 0 Width 3 Height 1 END 
+    BEGIN PlacementRule Constraint Interior     X 0 Y 1 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -6 Width 3 Height 6 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -6 Width 3 Height 6 END 
+END
+
+BEGIN Definition
+    Type Railgun
+    BEGIN Equipment Width 3 Height 2 Rotatable True Charge 1000 Powered true NonBlocking True END
+    BEGIN Port Type Power X 0 Y 1 END
+    BEGIN Slot X 1 Y 1 END
+    BEGIN Station X 1 Y 2 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y 0 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Interior     X 0 Y 1 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -6 Width 3 Height 6 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -6 Width 3 Height 6 END
+END
+
+BEGIN Definition
+    Type Cannon
+    BEGIN Equipment Width 3 Height 2 Rotatable True Powered true NonBlocking True END
+    BEGIN Port Type Power X 0 Y 1 END
+    BEGIN Slot X 2 Y 1 END
+    BEGIN Station X 1 Y 2 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y 0 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Interior     X 0 Y 1 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -6 Width 3 Height 6 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -6 Width 3 Height 6 END 
+END
+
+BEGIN Definition
+    Type MiningLaser
+    BEGIN Equipment Width 3 Height 2 Rotatable True Charge 300 Powered true  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 1 END
+    BEGIN PlacementRule Constraint Exterior       X 0 Y -6 Width 3 Height 6 END
+    BEGIN PlacementRule Constraint Unobstructed   X 0 Y -6 Width 3 Height 6 END
+    BEGIN PlacementRule Constraint WallScaffold   X 0 Y 0 Width 3 Height 1 END
+END
+
+BEGIN Definition
+    Type Deflector
+    BEGIN Equipment Width 4 Height 2 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 1 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y  0 Width 4 Height 1 END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  1 Width 4 Height 1 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -8 Width 4 Height 8 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -8 Width 4 Height 8 END
+END
+
+BEGIN Definition
+    Type Door
+    BEGIN Equipment Width 1 Height 2 Rotatable True  NonBlocking True END
+    BEGIN Port Type Atmosphere X 0 Y 0 END
+    BEGIN Port Type Atmosphere X 0 Y 1 END
+    BEGIN PlacementRule Constraint Wall     X 0 Y -1 Width 1 Height 1 END
+    BEGIN PlacementRule Constraint Wall     X 0 Y  2 Width 1 Height 1 END
+    BEGIN PlacementRule Constraint Interior X 0 Y  0 Width 1 Height 2 END 
+END
+
+BEGIN Definition
+    Type DroneBay
+    BEGIN Equipment Width 3 Height 3 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 2 END
+    BEGIN Slot X 1 Y 0 END
+    BEGIN Slot X 0 Y 2 END
+    BEGIN Slot X 2 Y 2 END
+    BEGIN Slot X 1 Y 2 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y  1 Width 3 Height 1 END 
+    BEGIN PlacementRule Constraint Interior     X 0 Y  2 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -3 Width 3 Height 3 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -3 Width 3 Height 3 END
+END
+
+BEGIN Definition
+    Type DockingPort
+    BEGIN Equipment Width 6 Height 2 Rotatable True  NonBlocking True END
+    BEGIN Slot X 1 Y 1 END
+    BEGIN Slot X 2 Y 1 END
+    BEGIN Slot X 3 Y 1 END
+    BEGIN Slot X 4 Y 1 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y  0 Width 6 Height 1 END 
+    BEGIN PlacementRule Constraint Interior     X 0 Y  1 Width 6 Height 3 END 
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  1 Width 6 Height 3 END 
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -6 Width 6 Height 6 END     
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -6 Width 6 Height 6 END
+END
+
+BEGIN Definition
+    Type PowerInjector
+    BEGIN Equipment Width 1 Height 2 Rotatable True  NonBlocking True END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 1 Height 2 END
+END
+
+BEGIN Definition
+    Type PowerCoil
+    BEGIN Equipment Width 1 Height 2 Rotatable True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 1 Height 2 END
+END
+
+BEGIN Definition
+    Type PowerCoilCharged
+    BEGIN Equipment Width 1 Height 3 Rotatable True Charge 1000  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 2 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 1 Height 3 END
+END
+
+BEGIN Definition 
+    Type Smelter
+    BEGIN Equipment Width 3 Height 3 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 0 END
+    BEGIN Slot X 0 Y 2 END
+    BEGIN Slot X 2 Y 2 END
+    BEGIN PlacementRule Constraint Interior X 0 Y  0 Width 3 Height 3 END
+END
+
+BEGIN Definition 
+    Type SewageMachine
+    BEGIN Equipment Width 3 Height 2 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Port Type Pipes X 2 Y 0 Resource Sewage Flow In END
+    BEGIN Port Type Pipes X 0 Y 1 Resource WasteWater Flow Out END
+    BEGIN Slot X 2 Y 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 3 Height 2 END
+END
+
+BEGIN Definition 
+    Type WaterPurifier
+    BEGIN Equipment Width 2 Height 2 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Port Type Pipes X 1 Y 0 Resource WasteWater Flow In END
+    BEGIN Port Type Pipes X 0 Y 1 Resource Water Flow Out END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 2 Height 2 END
+END
+
+BEGIN Definition 
+    Type AirReprocessor
+    BEGIN Equipment Width 3 Height 2 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Port Type Pipes X 2 Y 0 Resource CarbonDioxide Flow In END
+    BEGIN Port Type Pipes X 0 Y 1 Resource Oxygen Flow Out END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 3 Height 2 END
+END
+
+BEGIN Definition 
+    Type OxygenMaker
+    BEGIN Equipment Width 2 Height 2 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Port Type Pipes X 1 Y 0 Resource Water Flow In END
+    BEGIN Port Type Pipes X 0 Y 1 Resource Oxygen Flow Out END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 2 Height 2 END
+END
+
+BEGIN Definition 
+    Type IceGrinder
+    BEGIN Equipment Width 2 Height 2 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN Port Type Pipes X 1 Y 1 Resource WasteWater Flow Out END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 2 Height 2 END
+END
+
+BEGIN Definition
+    Type Reactor
+    BEGIN Equipment Width 3 Height 3 Rotatable True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 2 Flow Out END
+    BEGIN Port Type Pipes X 1 Y 0 Resource Fuel Flow In END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 3 Height 3 END
+END
+
+BEGIN Definition
+    Type FusionReactor
+    BEGIN Equipment Width 5 Height 5 Charge 2000  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 4 END
+    BEGIN Port Type Pipes X 1 Y 0 Resource Deuterium Flow In END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 5 Height 5 END
+END
+
+BEGIN Definition
+    Type Stairs
+    BEGIN Equipment Width 2 Height 2 Rotatable True  NonBlocking True END
+    BEGIN PlacementRule Constraint Interior X 0 Y  0 Width 2 Height 2 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -1 Width 2 Height 1 END
+    BEGIN Port Type Habitation X 0 Y 0 END
+END
+
+BEGIN Definition
+    Type SewagePipe
+    BEGIN Equipment Width 1 Height 1  NonBlocking True END
+    BEGIN Port Type Pipes X 0 Y 0 Resource Sewage Flow Out END
+END
+
+BEGIN Definition
+    Type GasCollector
+    BEGIN Equipment Width 4 Height 3 WidthOnTop 4 HeightOnTop 3 Powered True  NonBlocking True END
+    BEGIN Port Type Pipes X 0 Y 1 Resource MetreonGas Flow Out END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 4 Height 3 END
+    BEGIN PlacementRule Constraint UnobstructedOnTop X 0 Y 0 Width 4 Height 3 END
+END
+
+BEGIN Definition
+    Type HyperspaceCollector
+    BEGIN Equipment Width 4 Height 3 Powered True  NonBlocking True END
+    BEGIN Port Type Pipes X 0 Y 1 Resource HyperspaceIsotopes Flow Out END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN PlacementRule Constraint Interior X 0 Y  0 Width 1 Height 3 END
+    BEGIN PlacementRule Constraint Wall X 1 Y  0 Width 1 Height 3 END
+    BEGIN PlacementRule Constraint Exterior X 2 Y  0 Width 2 Height 3 END
+    BEGIN PlacementRule Constraint Unobstructed X 4 Y  0 Width 6 Height 3 END
+END
+
+BEGIN Definition
+    Type Refinery
+    BEGIN Equipment Width 2 Height 2 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Port Type Pipes X 0 Y 1 Flow In END
+    BEGIN Port Type Pipes X 1 Y 1 Flow Out END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 2 Height 2 END
+END
+
+BEGIN Definition
+    Type ChemicalLab
+    BEGIN Equipment Width 3 Height 3 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 0 END
+    BEGIN Port Type Pipes X 0 Y 2 END
+    BEGIN Port Type Pipes X 1 Y 2 END
+    BEGIN Port Type Pipes X 2 Y 2 END
+    BEGIN Slot X 1 Y 2 END
+    BEGIN Slot X 2 Y 2 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 3 Height 3 END
+END
+
+BEGIN Definition
+    Type MunitionsFactory
+    BEGIN Equipment Width 3 Height 2 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 0 END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN Slot X 2 Y 1 END
+    BEGIN Slot X 2 Y 0 END
+    BEGIN Station X 1 Y -1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 3 Height 2 END
+END
+
+BEGIN Definition
+    Type Fabricator
+    BEGIN Equipment Width 2 Height 2 Rotatable True Powered True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN Slot X 1 Y 1 END
+    BEGIN Slot X 1 Y 0 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 2 Height 2 END
+END
+
+BEGIN Definition
+    Type Assembler
+    BEGIN Equipment Width 3 Height 3 Rotatable True Powered True Crewed True Factory True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Port Type Pipes X 1 Y 0 END
+    BEGIN Slot X 0 Y 1 END
+    BEGIN Slot X 1 Y 1 END
+    BEGIN Slot X 2 Y 1 END
+    BEGIN Slot X 0 Y 2 END
+    BEGIN Slot X 1 Y 2 END
+    BEGIN Slot X 2 Y 2 END
+    BEGIN Station X 1 Y -1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 3 Height 3 END
+END
+
+BEGIN Definition
+    Type HyperspaceSensor
+    BEGIN Equipment Width 3 Height 2 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 1 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y  0 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  1 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -6 Width 3 Height 6 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -6 Width 3 Height 6 END
+END
+
+BEGIN Definition
+    Type HyperspaceSensorLR
+    BEGIN Equipment Width 3 Height 2 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 1 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y  0 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  1 Width 3 Height 1 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -6 Width 3 Height 6 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -6 Width 3 Height 6 END
+END
+
+BEGIN Definition
+    Type TelepathicSensor
+    BEGIN Equipment Width 3 Height 2 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 1 END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  1 Width 3 Height 1 END
+END
+
+BEGIN Definition
+    Type Hydroponics
+    BEGIN Equipment Width 4 Height 2 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 1 END
+    BEGIN Port Type Pipes Resource Water Flow In X 0 Y 0 END
+    BEGIN Slot X 1 Y 1 END
+    BEGIN Slot X 2 Y 1 END
+    BEGIN Slot X 3 Y 1 END
+    BEGIN PlacementRule Constraint Interior     X 0 Y 0 Width 4 Height 2 END
+END
+
+BEGIN Definition
+    Type RobotArm
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 1 Height 1 END	
+    BEGIN PlacementRule Constraint NoWall X 0 Y -2 Width 1 Height 5 END
+END
+
+BEGIN Definition
+    Type RobotArmShort
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 1 Height 1 END
+    BEGIN PlacementRule Constraint NoWall X 0 Y -1 Width 1 Height 3 END
+END
+
+BEGIN Definition
+    Type RobotArmSmart
+    BEGIN Equipment Width 1 Height 1 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 1 Height 1 END	
+    BEGIN PlacementRule Constraint NoWall X 0 Y -2 Width 1 Height 5 END
+END
+
+BEGIN Definition
+    Type Track
+    BEGIN Equipment Width 1 Height 1 Rotatable True NonBlocking True END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 1 Height 1 END
+END
+
+BEGIN Definition
+    Type RuinedEquipment
+    BEGIN Equipment Width 1 Height 1 Resizable True  NonBlocking True END
+END
+
+BEGIN Definition 
+    Type ScienceStation
+    BEGIN Equipment Width 3 Height 3 Rotatable True Powered True NonBlocking True END
+    BEGIN Port Type Power X 1 Y 0 END
+    BEGIN Slot X 1 Y 1 END
+    BEGIN Station X 0 Y -1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 3 Height 3 END
+END
+
+BEGIN Definition 
+    Type Supercomputer
+    BEGIN Equipment Width 2 Height 2 Rotatable True Powered True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 2 Height 2 END
+END
+
+BEGIN Definition
+    Type EnergyTransmitter
+    BEGIN Equipment Width 4 Height 2 Rotatable True Powered True Crewed True RequiredCrewType Scientist  NonBlocking True END
+    BEGIN Port Type Power X 1 Y 1 END
+    BEGIN Station X 1 Y 2 END
+    BEGIN PlacementRule Constraint Wall         X 0 Y  0 Width 4 Height 1 END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  1 Width 4 Height 1 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y -8 Width 4 Height 8 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y -8 Width 4 Height 8 END
+END
+
+BEGIN Definition
+    Type WeaponsConsole
+    BEGIN Equipment Width 5 Height 1 Rotatable True Powered True Crewed True RequiredCrewType WeaponsSpecialist  NonBlocking True END
+    BEGIN Port Type Power X 2 Y 0 END
+    BEGIN Station X 2 Y 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 5 Height 2 END
+END
+
+BEGIN Definition
+    Type SolarPanel
+    BEGIN Equipment Width 8 Height 4 Rotatable True  NonBlocking True END
+    BEGIN Port Type Power X 4 Y 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 8 Height 4 END
+    BEGIN PlacementRule Constraint Exterior     X 0 Y 0 Width 8 Height 4 END
+END
+
+BEGIN Definition
+    Type Table
+    BEGIN Equipment Width 4 Height 2 Rotatable True  NonBlocking True END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  0 Width 4 Height 2 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 4 Height 2 END
+END
+
+BEGIN Definition
+    Type Chair
+    BEGIN Equipment Width 1 Height 1 Rotatable True NonBlocking True END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  0 Width 1 Height 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 1 Height 1 END
+END
+
+BEGIN Definition
+    Type Sofa
+    BEGIN Equipment Width 1 Height 1 Rotatable True NonBlocking True END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  0 Width 1 Height 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 1 Height 1 END
+END
+
+BEGIN Definition
+    Type SmallTable
+    BEGIN Equipment Width 1 Height 1  NonBlocking True END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  0 Width 1 Height 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 1 Height 1 END
+END
+
+BEGIN Definition
+    Type PotPlant
+    BEGIN Equipment Width 1 Height 1  NonBlocking True END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  0 Width 1 Height 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 1 Height 1 END
+END
+
+BEGIN Definition
+    Type LightningRod
+    BEGIN Equipment Width 2 Height 9 Rotatable True  NonBlocking True END
+    BEGIN Port Type Power X 0 Y 8 END
+    BEGIN PlacementRule Constraint Wall         X  0 Y  8 Width 2 Height 1 END
+    BEGIN PlacementRule Constraint Exterior     X  0 Y  0 Width 2 Height 7 END
+    BEGIN PlacementRule Constraint Unobstructed X -1 Y -6 Width 4 Height 14 END
+END
+
+BEGIN Definition
+    Type FighterBay
+    BEGIN Equipment Width 3 Height 3 WidthOnTop 7 HeightOnTop 7 XOffsetOnTop -2 YOffsetOnTop -2 Rotatable True Powered True Crewed True NonBlocking True END
+    BEGIN PlacementRule Constraint Interior X 0 Y 0 Width 3 Height 3 END
+    BEGIN PlacementRule Constraint Unobstructed X -1 Y -1 Width 5 Height 5 END
+    BEGIN PlacementRule Constraint NoWall X -2 Y -2 Width 7 Height 7 END
+    BEGIN PlacementRule Constraint UnobstructedOnTop X -2 Y -2 Width 7 Height 7 END
+    BEGIN Port Type Power X 0 Y 0 END
+    BEGIN Port Type Pipes X 1 Y 0 Resource Fuel Flow In END
+    BEGIN Slot X 2 Y 0 END
+    BEGIN Slot X 2 Y 1 END
+    BEGIN Slot X 2 Y 2 END
+    BEGIN Slot X 0 Y 2 END
+    BEGIN Slot X 1 Y 2 END
+    BEGIN Station X 1 Y 3 END
+END
+
+BEGIN Definition
+    Type PowerSwitch
+    BEGIN Equipment Width 1 Height 1  NonBlocking True END
+    BEGIN PlacementRule Constraint Interior     X 0 Y  0 Width 1 Height 1 END
+    BEGIN PlacementRule Constraint Unobstructed X 0 Y  0 Width 1 Height 1 END
+    BEGIN Port Type Power X 0 Y 0 END
+END

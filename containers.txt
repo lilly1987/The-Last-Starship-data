@@ -1,0 +1,327 @@
+
+BEGIN Container  END
+BEGIN Container  
+    Type                 Fuel  
+    Capacity             1000  
+    LootSpawn            true
+    Fluid                true
+    BEGIN Colour     R 255  G 235  B 125  A 255  END
+END
+BEGIN Container  
+    Type                 Oxygen  
+    Capacity             1000  
+    LootSpawn            true
+    Fluid                true
+    BEGIN Colour     R 183  G 255  B 249  A 255  END
+END
+BEGIN Container  
+    Type                 FTLCharge  
+    Capacity             1  
+    LootSpawn            true
+    BEGIN Colour     R 143  G 204  B 62  A 255  END
+END
+BEGIN Container  
+    Type                 Bullets  
+    Capacity             300  
+    LootSpawn            true
+    BEGIN Colour     R 246  G 124  B 57  A 255  END
+END
+BEGIN Container  
+    Type                 RailgunShell  
+    Capacity             10  
+    LootSpawn            true
+    BEGIN Colour     R 246  G 124  B 57  A 255  END
+END
+BEGIN Container  
+    Type                 CannonShell  
+    Capacity             5  
+    LootSpawn            true
+    BEGIN Colour     R 246  G 124  B 57  A 255  END
+END
+BEGIN Container  
+    Type                 Water  
+    Capacity             1000  
+    LootSpawn            true
+    Fluid                true
+    BEGIN Colour     R 150  G 150  B 255  A 255  END
+END
+BEGIN Container  
+    Type                 Food  
+    Capacity             100  
+    LootSpawn            true
+    BEGIN Colour     R 50  G 255  B 50  A 255  END
+END
+BEGIN Container  
+    Type                 Sewage  
+    Capacity             1000  
+    Fluid                true
+    BEGIN Colour     R 150  G 80  B 40  A 255  END
+END
+BEGIN Container  
+    Type                 WasteWater  
+    Capacity             1000  
+    Fluid                true
+    BEGIN Colour     R 150  G 150  B 100  A 255  END
+END
+BEGIN Container  
+    Type                 Compost  
+    Capacity             100  
+    BEGIN Colour     R 155  G 158  B 79  A 255  END
+END
+BEGIN Container  
+    Type                 CarbonDioxide  
+    Capacity             1000  
+    Fluid                true
+    BEGIN Colour     R 180  G 180  B 180  A 255  END
+END
+BEGIN Container  
+    Type                 Deuterium  
+    Capacity             1000  
+    Fluid                true
+    LootSpawn            true
+    BEGIN Colour     R 238  G 171  B 233  A 255  END
+END
+BEGIN Container  
+    Type                 ScrapMetal  
+    Capacity             20  
+    Reagent              true  
+    BEGIN Colour     R 120  G 120  B 120  A 255  END
+END
+BEGIN Container  
+    Type                 MetalIngot  
+    Capacity             20  
+    Reagent              true  
+    LootSpawn            true
+    BEGIN Colour     R 170  G 170  B 170  A 255  END
+END
+BEGIN Container  
+    Type                 PreciousOre  
+    Capacity             20  
+    Reagent              true  
+    BEGIN Colour     R 200  G 200  B 150  A 255  END
+END
+BEGIN Container  
+    Type                 PreciousMetals  
+    Capacity             20  
+    LootSpawn            true
+    BEGIN Colour     R 255  G 180  B 50  A 255  END
+END
+BEGIN Container  
+    Type                 TiliumOre  
+    Capacity             30  
+    Reagent              true  
+    BEGIN Colour     R 155  G 255  B 130  A 255  END
+END
+BEGIN Container  
+    Type                 RefinedTilium  
+    Capacity             10  
+    Reagent              true  
+    BEGIN Colour     R 155  G 255  B 130  A 255  END
+END
+BEGIN Container  
+    Type                 MetallicMinerals  
+    Capacity             30  
+    Reagent              true  
+    BEGIN Colour     R 40  G 10  B 10  A 255  END
+END
+BEGIN Container  
+    Type                 CopperMinerals  
+    Capacity             30  
+    Reagent              true  
+    BEGIN Colour     R 90  G 10  B 10  A 255  END
+END
+BEGIN Container  
+    Type                 CopperIngot  
+    Capacity             20  
+    Reagent              true  
+    LootSpawn            true
+    BEGIN Colour     R 230  G 170  B 170  A 255  END
+END
+BEGIN Container  
+    Type                 NeubidiumOre  
+    Capacity             30  
+    Reagent              true  
+    BEGIN Colour     R 100  G 0  B 225  A 255  END
+END
+BEGIN Container  
+    Type                 NeubidiumIngot  
+    Capacity             10  
+    Reagent              true  
+    BEGIN Colour     R 100  G 0  B 225  A 255  END
+END
+BEGIN Container  
+    Type                 Ice  
+    Capacity             30  
+    Reagent              true  
+    BEGIN Colour     R 200  G 200  B 255  A 255  END
+END
+BEGIN Container  
+    Type                 MetreonGas  
+    Capacity             1000
+    Fluid                true
+    BEGIN Colour     R 240  G 60  B 25  A 255  END
+END
+BEGIN Container
+    Type                 ZeleonGas
+    Capacity             1000
+    Fluid                true
+    BEGIN Colour     R 255  G 0  B 140  A 255  END
+END
+BEGIN Container  
+    Type                 RefinedMetreon  
+    Capacity             1000  
+    Fluid                true
+    BEGIN Colour     R 220  G 150  B 50  A 255  END
+END
+BEGIN Container
+    Type                 StableZeleon
+    Capacity             1000
+    Fluid                true
+    BEGIN Colour     R 130  G 0  B 70  A 255  END
+END
+BEGIN Container  
+    Type                 Explosives  
+    Capacity             30  
+    LootSpawn            true
+    BEGIN Colour     R 220  G 220  B 220  A 255  END
+END
+BEGIN Container  
+    Type                 HyperspaceIsotopes  
+    Capacity             100  
+    Fluid                true
+    BEGIN Colour     R 200  G 255  B 20  A 255  END
+END
+BEGIN Container
+    Type                 StableIsotopes
+    Capacity             100
+    Fluid                true
+    BEGIN Colour     R 0  G 255  B 0  A 255  END
+END
+BEGIN Container  
+    Type                 Seeds  
+    Capacity             6  
+    BEGIN Colour     R 200  G 255  B 200  A 255  END
+END
+BEGIN Container  
+    Type                 FrameComponent  
+    Capacity             1  
+    Component            true
+    LootSpawn            true
+END
+BEGIN Container
+    Type                 MotorComponent  
+    Capacity             1  
+    Component            true
+    LootSpawn            true
+END
+BEGIN Container
+    Type                 CoilComponent  
+    Capacity             1  
+    Component            true
+    LootSpawn            true
+END
+BEGIN Container
+    Type                 LensComponent
+    Capacity             1
+    Component            true
+    LootSpawn            true
+END
+BEGIN Container
+    Type                 ProcessorComponent
+    Capacity             1
+    Component            true
+    LootSpawn            true
+END
+BEGIN Container
+    Type                 StargateStructure  
+    Capacity             1  
+    Component            true  
+END
+BEGIN Container  
+    Type                 StargateResin  
+    Capacity             10  
+    Component            true  
+    BEGIN Colour     R 200  G 150  B 50  A 255  END
+END
+BEGIN Container  
+    Type                 StargateActuator  
+    Capacity             1  
+    Component            true  
+END
+BEGIN Container
+    Type                 StargateReceiver
+    Capacity             1
+    Component            true
+END
+BEGIN Container
+    Type                 StargateCapacitor
+    Capacity             1
+    Component            true
+END
+BEGIN Container
+    Type                 ShieldedZeleonCanister
+    Capacity             8
+    Component            true
+    BEGIN Colour     R 130  G 0  B 70  A 255  END
+END
+BEGIN Container
+    Type                 ShieldedCanisterComponent
+    Capacity             12
+    Component            true
+    BEGIN Colour     R 23  G 23  B 23  A 255  END
+END
+BEGIN Container
+    Type                 EnergyCellFrameComponent
+    Capacity             1
+    Component            true
+END
+BEGIN Container
+    Type                 ZeleonEnergyCell
+    Capacity             10
+    Component            true
+END
+BEGIN Container
+    Type                 NeubidiumCapacitor
+    Capacity             1
+    Component            true
+END
+BEGIN Container
+    Type                EmptyCrystalComponent
+    Capacity            1
+    Component           true
+END
+BEGIN Container
+    Type                ChargedCrystal
+    Capacity            1
+    Component           true
+    BEGIN Colour    R 85 G 0 B 0 A 255 END
+END
+BEGIN Container
+    Type                QuantumWaferComponent
+    Capacity            1
+    Component           true
+    BEGIN Colour    R 93 G 173 B 236 A 255 END
+END
+BEGIN Container
+    Type                QuantumProcessorComponent
+    Capacity            1
+    Component           true
+    BEGIN Colour    R 77 G 77 B 255 A 255 END
+END
+BEGIN Container
+    Type                EmptyComputeGridComponent
+    Capacity            1
+    Component           true
+END
+BEGIN Container
+    Type                QuantumComputeGridComponent
+    Capacity            1
+    Component           true
+    BEGIN Colour    R 106 G 90 B 205 A 255 END
+END
+BEGIN Container
+    Type                WarpAlignmentComputer
+    Capacity            1
+    Component           true
+    BEGIN Colour    R 64 G 224 B 208 A 255 END
+END

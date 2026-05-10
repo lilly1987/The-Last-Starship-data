@@ -1,0 +1,79 @@
+BEGIN Phase
+    Phase 1
+    BEGIN Component
+        Type        Fuel
+        Quantity    1
+    END
+END
+
+BEGIN Phase
+    Phase 2
+        BEGIN Component
+        Type        Fuel
+        Quantity    1
+    END
+END
+
+BEGIN Phase
+    Phase 3
+    BEGIN Component
+        Type        Fuel
+        Quantity    1
+    END
+END
+
+BEGIN Phase
+    Phase 4
+    BEGIN Component
+        Type        Fuel
+        Quantity    1
+    END
+END
+
+BEGIN Phase
+    Phase 5
+    BEGIN Power
+        PowerRequired   1
+        Duration        1
+    END
+END
+
+BEGIN Phase
+    Phase 6
+    BEGIN Component
+        Type        Fuel
+        Quantity    1
+    END
+END
+
+BEGIN Phase
+    Phase 7
+    BEGIN Component
+        Type        Fuel
+        Quantity    1
+    END
+END
+
+BEGIN Phase
+    Phase 8
+    BEGIN Component
+        Type        Fuel
+        Quantity    1
+    END
+END
+
+BEGIN Phase
+    Phase 9
+    BEGIN Component
+        Type        Fuel
+        Quantity    1
+    END
+END
+
+BEGIN Phase
+    Phase 10
+    BEGIN Power
+        PowerRequired   1
+        Duration        1
+    END
+END

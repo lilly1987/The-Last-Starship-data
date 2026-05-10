@@ -1,0 +1,777 @@
+
+BEGIN TreeNode   
+    Name                 ROOT  
+       
+    Position.x           -1.21183  
+    Position.y           -8.482815  
+    Size                 125  
+END
+BEGIN TreeNode   
+    Name                 Logistics1  
+       
+    
+    Position.x           -95.39521  
+    Position.y           -228.4795  
+    Size                 55  
+    Requirements         [ROOT]  
+    RecipeUnlocks        "[TinyTank, SmallStorageCrate, Loader]"  
+    SpecialUnlocks       [AdvancedLogistics]  
+END
+BEGIN TreeNode   
+    Name                 Logistics2  
+       
+    
+    Position.x           -70.76479  
+    Position.y           -420.6974  
+    Size                 65  
+    Requirements         [Logistics1]  
+    RecipeUnlocks        "[SmallTank, StorageCrate]"  
+END
+BEGIN TreeNode   
+    Name                 Logistics3  
+       
+    
+    Position.x           -117.7925  
+    Position.y           -585.133  
+    Size                 80  
+    Requirements         [Logistics2]  
+    RecipeUnlocks        [Tank]  
+END
+BEGIN TreeNode   
+    Name                 Automation  
+       
+    
+    
+    Position.x           -270  
+    Position.y           -75  
+    Size                 60  
+    Requirements         [ROOT]  
+    RecipeUnlocks        "[RobotArm, Track]"  
+END
+BEGIN TreeNode   
+    Name                 CompactAutomation  
+       
+    
+    
+    Position.x           -459.8532  
+    Position.y           -238.5527  
+    Size                 70  
+    Requirements         [Automation]  
+    RecipeUnlocks        [RobotArmShort]  
+END
+BEGIN TreeNode   
+    Name                 SmartAutomation  
+       
+    
+    
+    Position.x           -413.6582  
+    Position.y           -318.7038  
+    Size                 80  
+    Requirements         [Automation]  
+    RecipeUnlocks        [RobotArmSmart]  
+END
+BEGIN TreeNode   
+    Name                 Metallurgy1  
+       
+    
+    
+    Position.x           -157.7992  
+    Position.y           298.1522  
+    Size                 60  
+    Requirements         [Science]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 SmelterEfficiency  
+            Value                2  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 Metallurgy2  
+       
+    
+    
+    Position.x           -225.3418  
+    Position.y           423.1833  
+    Size                 80  
+    Requirements         [Metallurgy1]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 SmelterEfficiency  
+            Value                4  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 DroneIntelligence  
+       
+    
+    
+    Position.x           216.1929  
+    Position.y           371.1648  
+    Size                 75  
+    Requirements         [DroneSpeed1]  
+    SpecialUnlocks       [DroneBatchCollection]  
+END
+BEGIN TreeNode   
+    Name                 DroneSpeed1  
+       
+    
+    
+    Position.x           12.95092  
+    Position.y           214.4966  
+    Size                 60  
+    Requirements         [ROOT]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 DroneSpeed  
+            Value                2  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 DroneSpeed2  
+       
+    
+    
+    Position.x           87.06925  
+    Position.y           421.886  
+    Size                 80  
+    Requirements         [DroneSpeed1]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 DroneSpeed  
+            Value                2  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 DroneAssembly  
+       
+    
+    
+    Position.x           -50.53185  
+    Position.y           419.5049  
+    Size                 80  
+    Requirements         [DroneSpeed1]  
+    RecipeUnlocks        "[LogisticsDrone]"  
+END
+BEGIN TreeNode   
+    Name                 TrackSpeed1  
+       
+    
+    
+    Position.x           -514.1309  
+    Position.y           -11.81118  
+    Size                 70  
+    Requirements         [Automation]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 TrackSpeed  
+            Value                2  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 TrackSpeed2  
+       
+    
+    
+    Position.x           -676.6607  
+    Position.y           -50.23899  
+    Size                 70  
+    Requirements         [TrackSpeed1]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 TrackSpeed  
+            Value                3  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 RobotArmSpeed  
+       
+    
+    
+    Position.x           -261.9663  
+    Position.y           -276.7066  
+    Size                 70  
+    Requirements         [Automation]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 RobotArmSpeed  
+            Value                2  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 MiningLaserAccuracy  
+       
+    
+    
+    Position.x           -351.8633  
+    Position.y           274.7784  
+    Size                 75  
+    Requirements         [Science]  
+    SpecialUnlocks       [MiningLaserAccuracy]  
+END
+BEGIN TreeNode   
+    Name                 MiningLaserAccuracy2  
+       
+    
+    
+    Position.x           -459.0955  
+    Position.y           381.6183  
+    Size                 75  
+    Requirements         [MiningLaserAccuracy]  
+    SpecialUnlocks       [MiningLaserAccuracy2]  
+END
+BEGIN TreeNode   
+    Name                 DeflectorBeams  
+       
+    
+    
+    Position.x           -417.4734  
+    Position.y           128.3339  
+    Size                 75  
+    Requirements         [Science]  
+    RecipeUnlocks        [Deflector]  
+END
+BEGIN TreeNode   
+    Name                 StargateFrame  
+    
+    Hidden               true  
+    Position.x           500  
+    Position.y           -500  
+    RecipeUnlocks        [StargateStructure]  
+END
+BEGIN TreeNode   
+    Name                 StargateAfterDSI  
+    Hidden               true  
+    Position.x           457.2957  
+    Position.y           -551.5133  
+    UnlockStargatePhase  4  
+END
+BEGIN TreeNode   
+    Name                 StargatePart1  
+       
+    
+    Position.x           176.0932  
+    Position.y           12.5422  
+    Size                 75   
+    Requirements         [ROOT]  
+    RecipeUnlocks        [StargateStructure]  
+    SpecialUnlocks       [StargatePart1]  
+END
+BEGIN TreeNode   
+    Name                 StargatePart2  
+       
+    
+    
+    Position.x           317.6979  
+    Position.y           52.58908  
+    Size                 75   
+    Requirements         [StargatePart1]  
+    RecipeUnlocks        "[StargateActuator, StargateResin]"  
+    SpecialUnlocks       [StargatePart2]  
+END
+BEGIN TreeNode   
+    Name                 StargatePart3  
+       
+    
+    
+    Position.x           423.2855  
+    Position.y           -39.59588  
+    Size                 75   
+    Requirements         [StargatePart2]  
+    RecipeUnlocks        "[EnergyTransmitter, StargateReceiver, StargateCapacitor]"  
+    SpecialUnlocks       [StargatePart3]  
+END
+BEGIN TreeNode   
+    Name                 StargatePart4  
+    Hidden               true  
+    Position.x           557.2957  
+    Position.y           -451.5133  
+    UnlockStargatePhase  6  
+END
+BEGIN TreeNode   
+    Name                 StargatePart5  
+    Hidden               true  
+    Position.x           657.2957  
+    Position.y           -551.5133  
+    UnlockStargatePhase  7  
+END
+BEGIN TreeNode   
+    Name                 StargatePart6  
+    Hidden               true  
+    Position.x           757.2957  
+    Position.y           -451.5133  
+    UnlockStargatePhase  8  
+END
+BEGIN TreeNode   
+    Name                 StargatePart7  
+    Hidden               true  
+    Position.x           857.2957  
+    Position.y           -351.5133  
+    UnlockStargatePhase  9  
+END
+BEGIN TreeNode   
+    Name                 StargatePart8  
+    Hidden               true  
+    Position.x           957.2957  
+    Position.y           -451.5133  
+    UnlockStargatePhase  10  
+END
+BEGIN TreeNode   
+    Name                 ZeleonGasRefining  
+       
+    
+    
+    Position.x           607.9849  
+    Position.y           13.28945  
+    Size                 75  
+    Requirements         [StargatePart3]  
+    RecipeUnlocks        "[ZeleonGas, StableZeleon, LightningRod]"  
+END
+BEGIN TreeNode   
+    Name                 ZeleonEnergyContainment  
+       
+    
+    
+    Position.x           743.3815  
+    Position.y           16.39274  
+    Size                 75  
+    Requirements         [ZeleonGasRefining]  
+    RecipeUnlocks        "[ShieldedCanisterComponent, ShieldedZeleonCanister, ZeleonEnergyCell]"  
+END
+BEGIN TreeNode   
+    Name                 NeubidiumProcessing  
+       
+    
+    
+    Position.x           577.5136  
+    Position.y           -95.20751  
+    Size                 75  
+    Requirements         [StargatePart3]  
+    RecipeUnlocks        [NeubidiumOre]  
+END
+BEGIN TreeNode   
+    Name                 NeubidiumFabrication  
+       
+    
+    
+    Position.x           716.7653  
+    Position.y           -136.6698  
+    Size                 75  
+    Requirements         [NeubidiumProcessing]  
+    RecipeUnlocks        "[EnergyCellFrameComponent, NeubidiumCapacitor]"  
+END
+BEGIN TreeNode   
+    Name                 TiddletCrystals  
+        
+    Position.x           716.7653  
+    Position.y           -236.6698  
+    RecipeUnlocks        "[ChargedCrystal, EmptyCrystalComponent, LaserInfuser, RadiationBlocker]"  
+END
+BEGIN TreeNode   
+    Name                 QuantumProcessing  
+       
+    
+    
+    Position.x           865.7653  
+    Position.y           -70.6698  
+    Size                 75  
+    Requirements         "[NeubidiumFabrication, ZeleonEnergyContainment]"  
+    RecipeUnlocks        "[QuantumProcessorComponent, QuantumWaferComponent, EmptyComputeGridComponent, QuantumComputeGridComponent, WarpAlignmentComputer]"  
+END
+BEGIN TreeNode   
+    Name                 Science  
+       
+    
+    Position.x           -170.7674  
+    Position.y           145.3183  
+    Size                 75  
+    Requirements         [ROOT]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 ReactorEfficiency  
+            Value                2  
+        END
+        BEGIN Boost      
+            Item                 SmelterEfficiency  
+            Value                2  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 Habitation  
+       
+    
+    Position.x           113.7085  
+    Position.y           -221.1899  
+    Size                 75  
+    Requirements         [ROOT]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 WasteRecyclingEfficiency  
+            Value                2
+        END
+        BEGIN Boost      
+            Item                 WaterRecyclingEfficiency  
+            Value                2  
+        END
+        BEGIN Boost      
+            Item                 AirRecyclingEfficiency  
+            Value                2  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 Recycling1  
+       
+    
+    
+    Position.x           159.4438  
+    Position.y           -412.7807  
+    Size                 75  
+    Requirements         [Habitation]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 WasteRecyclingEfficiency  
+            Value                2
+        END
+        BEGIN Boost      
+            Item                 WaterRecyclingEfficiency  
+            Value                2
+        END
+        BEGIN Boost      
+            Item                 AirRecyclingEfficiency  
+            Value                2
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 Recycling2  
+       
+    
+    
+    Position.x           153.5051  
+    Position.y           -595.4805  
+    Size                 75  
+    Requirements         [Recycling1]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 WasteRecyclingEfficiency  
+            Value                2  
+        END
+        BEGIN Boost      
+            Item                 WaterRecyclingEfficiency  
+            Value                2  
+        END
+        BEGIN Boost      
+            Item                 AirRecyclingEfficiency  
+            Value                2
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 Hydroponics1  
+       
+    
+    
+    Position.x           267.3324  
+    Position.y           -367.9282  
+    Size                 75  
+    Requirements         [Habitation]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 HarvestingYield  
+            Value                1.25  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 Hydroponics2  
+       
+    
+    
+    Position.x           329.2637  
+    Position.y           -520.3311  
+    Size                 75  
+    Requirements         [Hydroponics1]  
+    RecipeUnlocks        [Hydroponics]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 HarvestingYield  
+            Value                1.5  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 AtmosphericProcessing  
+       
+    
+    
+    Position.x           350.8371  
+    Position.y           -283.6781  
+    Size                 75  
+    Requirements         [Habitation]  
+    RecipeUnlocks        "[Airduct, Scrubber]"  
+END
+BEGIN TreeNode   
+    Name                 AtmosphericProcessing2  
+       
+    
+    
+    Position.x           449.8895  
+    Position.y           -427.0822  
+    Size                 75  
+    Requirements         [AtmosphericProcessing]  
+    RecipeUnlocks        "[AirReprocessor, OxygenMaker]"  
+END
+BEGIN TreeNode   
+    Name                 WasteProcessing  
+       
+    
+    
+    Position.x           321.8769  
+    Position.y           -169.354  
+    Size                 75  
+    Requirements         [Habitation]  
+    RecipeUnlocks        "[SewagePipe, SewageMachine, WaterPurifier, IceGrinder]"  
+END
+BEGIN TreeNode   
+    Name                 SectorSurvey  
+       
+    
+    
+    Position.x           -545.6474  
+    Position.y           236.675  
+    Size                 75  
+    Requirements         [Science]  
+    RecipeUnlocks        [HyperspaceSensorLR]  
+    SpecialUnlocks       [SectorSurvey]  
+END
+BEGIN TreeNode   
+    Name                 AdvancedTracks  
+       
+    
+    
+    Position.x           -513.5753  
+    Position.y           -118.2574  
+    Size                 75  
+    Requirements         [Automation]  
+    SpecialUnlocks       [TrackSplitter]  
+END
+BEGIN TreeNode   
+    Name                 ReactorEfficiencyRepeatable  
+    
+    
+    Repeatable           true   
+    Position.x           -424.4407  
+    Position.y           508.7617  
+    Size                 75  
+    Requirements         [Science]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 ReactorEfficiency  
+            Value                2
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 DroneSpeedRepeatable  
+    
+    
+    Repeatable           true   
+    Position.x           280.0662  
+    Position.y           532.9536  
+    Size                 75  
+    Requirements         [DroneSpeed2]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 DroneSpeed  
+            Value                2  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 HydroponicsRepeatable  
+    
+    
+    Repeatable           true  
+    Position.x           381.5352  
+    Position.y           -686.7644  
+    Size                 75  
+    Requirements         [Hydroponics2]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 HarvestingYield  
+            Value                2
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 MetallurgyRepeatable  
+    
+    
+    Repeatable           true  
+    Position.x           -298.5527  
+    Position.y           578.3366  
+    Size                 80  
+    Requirements         [Metallurgy2]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 SmelterEfficiency  
+            Value                2
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 RobotArmSpeedRepeatable  
+    
+    
+    Repeatable           true  
+    Position.x           -261.9663  
+    Position.y           -376.7066  
+    Size                 70  
+    Requirements         [RobotArmSpeed]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 RobotArmSpeed  
+            Value                2
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 Fighters1  
+       
+    
+    
+    Position.x           200.1226  
+    Position.y           162.7155  
+    Size                 70  
+    Requirements         [ROOT]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 FighterArmour  
+            Value                2
+        END
+        BEGIN Boost      
+            Item                 FighterSpeed  
+            Value                1.1  
+        END
+        BEGIN Boost      
+            Item                 FighterFuel  
+            Value                2
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 FighterArmour1  
+       
+    
+    
+    Position.x           413.7397  
+    Position.y           137.5918  
+    Size                 70  
+    Requirements         [Fighters1]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 FighterArmour  
+            Value                2
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 FighterArmour2  
+       
+    
+    
+    Position.x           578.1853  
+    Position.y           154.7492  
+    Size                 70  
+    Requirements         [FighterArmour1]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 FighterArmour  
+            Value                4
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 FighterArmour3  
+       
+    
+    
+    Position.x           684.4706  
+    Position.y           245.3595  
+    Size                 70  
+    Requirements         [FighterArmour2]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 FighterArmour  
+            Value                6
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 FighterSpeed1  
+       
+    
+    
+    Position.x           328.754  
+    Position.y           290.3308  
+    Size                 70  
+    Requirements         [Fighters1]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 FighterSpeed  
+            Value                1.25  
+        END
+        BEGIN Boost      
+            Item                 FighterFuel  
+            Value                2  
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 FighterSpeed2  
+       
+    
+    
+    Position.x           442.2788  
+    Position.y           390.5887  
+    Size                 70  
+    Requirements         [FighterSpeed1]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 FighterSpeed  
+            Value                1.5  
+        END
+        BEGIN Boost      
+            Item                 FighterFuel  
+            Value                2.5
+        END
+    END
+END
+BEGIN TreeNode   
+    Name                 FighterSpeed3  
+       
+    
+    
+    Position.x           601.9821  
+    Position.y           405.2466  
+    Size                 70  
+    Requirements         [FighterSpeed2]  
+    BEGIN PerformanceBoosts 
+        BEGIN Boost      
+            Item                 FighterSpeed  
+            Value                2.0 
+        END
+        BEGIN Boost      
+            Item                 FighterFuel  
+            Value                5  
+        END
+    END
+END
