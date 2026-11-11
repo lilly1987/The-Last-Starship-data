@@ -415,6 +415,9 @@ BEGIN Definition
     BEGIN Slot X 0 Y 1 END
     BEGIN Slot X 2 Y 1 END
     BEGIN Slot X 2 Y 0 END
+    BEGIN Slot X 0 Y 0 END
+    BEGIN Slot X 1 Y 0 END
+    BEGIN Slot X 1 Y 1 END
     BEGIN Station X 1 Y -1 END
     BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 3 Height 2 END
 END
@@ -426,12 +429,13 @@ BEGIN Definition
     BEGIN Slot X 0 Y 1 END
     BEGIN Slot X 1 Y 1 END
     BEGIN Slot X 1 Y 0 END
+    BEGIN Slot X 0 Y 0 END
     BEGIN PlacementRule Constraint Unobstructed X 0 Y 0 Width 2 Height 2 END
 END
 
 BEGIN Definition
     Type Assembler
-    BEGIN Equipment Width 3 Height 3 Rotatable True Powered True Crewed True Factory True  NonBlocking True END
+    BEGIN Equipment Width 3 Height 3 Rotatable True Powered True Factory True  NonBlocking True END
     BEGIN Port Type Power X 0 Y 0 END
     BEGIN Port Type Pipes X 1 Y 0 END
     BEGIN Slot X 0 Y 1 END

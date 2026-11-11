@@ -163,9 +163,349 @@ BEGIN Recipe
     BEGIN Item       Type SlotOutput  Index 1  Resource Bullets  Quantity 1000.00000  Capacity 2000.00000  END
     BEGIN Item       Type SlotOutput  Index 2  Resource Bullets  Quantity 1000.00000  Capacity 2000.00000  END
     BEGIN Item       Type SlotOutput  Index 3  Resource Bullets  Quantity 1000.00000  Capacity 2000.00000  END
+    BEGIN Item       Type SlotOutput  Index 4  Resource Bullets  Quantity 1000.00000  Capacity 2000.00000  END
+    BEGIN Item       Type SlotOutput  Index 5  Resource Bullets  Quantity 1000.00000  Capacity 2000.00000  END
 END
 BEGIN Recipe
     Type                Fabricator
+END
+
+BEGIN Recipe
+    Type                Loader
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 5 Resource Loader  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Seeds
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Seeds  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Seeds  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Seeds  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Seeds  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                StableIsotopes
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource StableIsotopes  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource StableIsotopes  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource StableIsotopes  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource StableIsotopes  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                Food
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Food  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Food  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Food  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Food  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                Water
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Water  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Water  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Water  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Water  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                CannonShell
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource CannonShell  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource CannonShell  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource CannonShell  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource CannonShell  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                RailgunShell
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource RailgunShell  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource RailgunShell  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource RailgunShell  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource RailgunShell  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                Bullets
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Bullets  Quantity 600.00000  Capacity 1200.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Bullets  Quantity 600.00000  Capacity 1200.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Bullets  Quantity 600.00000  Capacity 1200.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Bullets  Quantity 600.00000  Capacity 1200.00000 END
+END
+BEGIN Recipe
+    Type                FTLCharge
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource FTLCharge  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource FTLCharge  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource FTLCharge  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource FTLCharge  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                Oxygen
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Oxygen  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Oxygen  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Oxygen  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Oxygen  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                Fuel
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Fuel  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Fuel  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Fuel  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Fuel  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                HyperspaceIsotopes
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource HyperspaceIsotopes  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 1 Resource HyperspaceIsotopes  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 2 Resource HyperspaceIsotopes  Quantity 1000.00000  Capacity 2000.00000 END
+    BEGIN Item      Type SlotOutput Index 3 Resource HyperspaceIsotopes  Quantity 1000.00000  Capacity 2000.00000 END
+END
+BEGIN Recipe
+    Type                Airduct
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Airduct  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Airduct  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Airduct  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Airduct  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                LogisticsDrone
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource LogisticsDrone  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource LogisticsDrone  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource LogisticsDrone  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource LogisticsDrone  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                RobotArmShort
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource RobotArmShort  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource RobotArmShort  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource RobotArmShort  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource RobotArmShort  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                RobotArm
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                RobotArmSmart
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource RobotArmSmart  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource RobotArmSmart  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource RobotArmSmart  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource RobotArmSmart  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                ChemicalLab
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource ChemicalLab  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                GasCollector
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource GasCollector  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                MunitionsFactory
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource MunitionsFactory  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Cannon
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Cannon  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                GatlingGun
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource GatlingGun  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Railgun
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Railgun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Railgun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Railgun  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Railgun  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Reactor
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Reactor  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Reactor  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Reactor  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Reactor  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                FusionReactor
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource FusionReactor  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource FusionReactor  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource FusionReactor  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource FusionReactor  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                MiningLaser
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource MiningLaser  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource MiningLaser  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource MiningLaser  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource MiningLaser  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Track
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Track  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Track  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Track  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Track  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Engine
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Engine  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Engine  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Engine  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Engine  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Thruster
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Thruster  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Thruster  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Thruster  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Thruster  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                TinyTank
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource TinyTank  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource TinyTank  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource TinyTank  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource TinyTank  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                SmallTank
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource SmallTank  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource SmallTank  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource SmallTank  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource SmallTank  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Tank
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Tank  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Tank  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Tank  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Tank  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                ScienceStation
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource ScienceStation  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource ScienceStation  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource ScienceStation  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource ScienceStation  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
+    Type                Supercomputer
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Supercomputer  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Supercomputer  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Supercomputer  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Supercomputer  Quantity 1.0 Capacity 1.0 END
 END
 BEGIN Recipe
     Type                SpaceSuit
@@ -174,6 +514,7 @@ BEGIN Recipe
     BEGIN Item      Type SlotOutput  Index 0  Resource SpaceSuit  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 1  Resource SpaceSuit  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 2  Resource SpaceSuit  Quantity 1.0  Capacity 1.0 END
+    BEGIN Item      Type SlotOutput  Index 3  Resource SpaceSuit  Quantity 1.0  Capacity 1.0 END
 END
 BEGIN Recipe
     Type                FrameComponent
@@ -182,6 +523,7 @@ BEGIN Recipe
     BEGIN Item      Type SlotOutput  Index 0  Resource FrameComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 1  Resource FrameComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 2  Resource FrameComponent  Quantity 1.0  Capacity 1.0 END
+    BEGIN Item      Type SlotOutput  Index 3  Resource FrameComponent  Quantity 1.0  Capacity 1.0 END
 END
 BEGIN Recipe
     Type                MotorComponent
@@ -190,6 +532,7 @@ BEGIN Recipe
     BEGIN Item      Type SlotOutput  Index 0  Resource MotorComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 1  Resource MotorComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 2  Resource MotorComponent  Quantity 1.0  Capacity 1.0 END
+    BEGIN Item      Type SlotOutput  Index 3  Resource MotorComponent  Quantity 1.0  Capacity 1.0 END
 END
 BEGIN Recipe
     Type                CoilComponent
@@ -198,6 +541,7 @@ BEGIN Recipe
     BEGIN Item      Type SlotOutput  Index 0  Resource CoilComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 1  Resource CoilComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 2  Resource CoilComponent  Quantity 1.0  Capacity 1.0 END
+    BEGIN Item      Type SlotOutput  Index 3  Resource CoilComponent  Quantity 1.0  Capacity 1.0 END
 END
 BEGIN Recipe
     Type                LensComponent
@@ -206,6 +550,7 @@ BEGIN Recipe
     BEGIN Item      Type SlotOutput  Index 0  Resource LensComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 1  Resource LensComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 2  Resource LensComponent  Quantity 1.0  Capacity 1.0 END
+    BEGIN Item      Type SlotOutput  Index 3  Resource LensComponent  Quantity 1.0  Capacity 1.0 END
 END
 BEGIN Recipe
     Type                ProcessorComponent
@@ -214,7 +559,9 @@ BEGIN Recipe
     BEGIN Item      Type SlotOutput  Index 0  Resource ProcessorComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 1  Resource ProcessorComponent  Quantity 1.0  Capacity 1.0 END
     BEGIN Item      Type SlotOutput  Index 2  Resource ProcessorComponent  Quantity 1.0  Capacity 1.0 END
+    BEGIN Item      Type SlotOutput  Index 3  Resource ProcessorComponent  Quantity 1.0  Capacity 1.0 END
 END
+
 BEGIN Recipe
     Type                QuantumWaferComponent
     Equipment           Fabricator
@@ -251,6 +598,16 @@ BEGIN Recipe
     BEGIN Item      Type SlotOutput  Index 2  Resource EmptyCrystalComponent  Quantity 1.0  Capacity 1.0 END 
 END
 BEGIN Recipe
+    Type                Battery
+    Equipment           Fabricator
+    Duration 0.1
+    NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource Battery  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource Battery  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource Battery  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource Battery  Quantity 1.0 Capacity 1.0 END
+END
+BEGIN Recipe
     Type                Assembler
     Equipment           Fabricator
     Duration 0.1
@@ -259,8 +616,6 @@ BEGIN Recipe
     BEGIN Item      Type SlotOutput Index 1 Resource Assembler  Quantity 1.0 Capacity 1.0 END
     BEGIN Item      Type SlotOutput Index 2 Resource Assembler  Quantity 1.0 Capacity 1.0 END
     BEGIN Item      Type SlotOutput Index 3 Resource Assembler  Quantity 1.0 Capacity 1.0 END
-    BEGIN Item      Type SlotOutput Index 4 Resource Assembler  Quantity 1.0 Capacity 1.0 END
-    BEGIN Item      Type SlotOutput Index 5 Resource Assembler  Quantity 1.0 Capacity 1.0 END
 END
 BEGIN Recipe
     Type                Assembler
@@ -481,6 +836,11 @@ BEGIN Recipe
     Equipment           Assembler
     Duration 0.1
     NeedsUnlocking      false
+    BEGIN Item      Type SlotOutput Index 0 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 1 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 2 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 3 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
+    BEGIN Item      Type SlotOutput Index 4 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
     BEGIN Item      Type SlotOutput Index 5 Resource RobotArm  Quantity 1.0 Capacity 1.0 END
 END
 BEGIN Recipe
